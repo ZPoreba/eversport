@@ -1,5 +1,12 @@
+:root {
+  --eversport-color:#38aea0;
+}
+
 .App {
-  text-align: center;
+  font-family: SF-Pro;
+  display: flex;
+  min-height: 100vh;
+  font-size: 0.9rem;
 }
 
 .App-logo {
@@ -34,5 +41,156 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: url('fonts/SF-Pro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.eversport-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding: 5%;
+}
+
+.filter-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: grey;
+}
+
+.filter-content {
+  font-size: 0.9rem;
+  margin-top: 5%;
+}
+
+.radio-label {
+  margin: 1px;
+  padding: 0 1px 0 1px;
+  border-radius: 3px;
+}
+
+.active-star {
+  background: orange;
+}
+
+.inactive-star {
+  background: lightgray;
+}
+
+.active-star > img, .inactive-star > img {
+  filter: invert(100%);
+}
+
+.MuiTypography-body2 {
+  font-size: 0.79rem !important;
+}
+
+.MuiChip-root {
+  border-radius: 6px !important;
+  color: #808080 !important;
+  font-weight: bold;
+}
+
+.venue-picture-img {
+  border-radius: 50%;
+  margin: 0 10px 0 10px;
+  height: 20px;
+  width: 20px;
+}
+
+.location-div {
+  font-size: 0.79rem;
+  color: grey;
+  display: inline;
+  width: 100%;
+}
+
+.filter-component-div {
+  width: 25%;
+  padding: 1%;
+}
+
+.filter-list li:first-child {
+  list-style: none;
+}
+
+.filter-list {
+  padding-left: 0;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.filter-list li {
+  margin-right: 10%;
+  white-space: nowrap;
+}
+
+.filter-content a {
+  cursor: pointer;
+}
+
+.filter-content a:hover {
+  text-decoration: underline;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-radius: 30px !important;
+}
+
+.MuiOutlinedInput-root {
+  transform: scale(0.9) !important;
+}
+
+.select-input {
+  font-size: 0.9rem;
+}
+
+.main-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5% 1.5%;
+  padding: 1%;
+}
+
+.sport-select {
+  min-width: 200px;
+}
+
+.MuiFormControl-root {
+  display: inline !important;
+}
+
+@media (max-width: 800px) {
+  .main-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .MuiOutlinedInput-root {
+    width: 50%;
+  }
+
+  .sport-select {
+    min-width: 80px;
+  }
+
+  .eversport-logo {
+    width: 50%
+  }
+
+  .full-screen-div {
+    display: block;
+    width: 100%;
+  }
+
+  .full-screen-div-none {
+    display: none;
+    width: unset;
   }
 }
